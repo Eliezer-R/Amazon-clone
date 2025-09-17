@@ -1,6 +1,8 @@
 # Amazon Clone E-commerce
 
 Un e-commerce completo similar a Amazon construido con React y Node.js, con diseño moderno y tema oscuro.
+![Photo](./frontend/public/clone-amazon.png)
+![Photo](./frontend/public/login-clone.png)
 
 ## 🚀 Características
 
@@ -35,20 +37,13 @@ amazon-clone-ecommerce/
 │   │   ├── components/      # Componentes reutilizables
 │   │   ├── pages/          # Páginas principales
 │   │   ├── context/        # Context API para estado global
-│   │   ├── hooks/          # Custom hooks
-│   │   ├── services/       # Servicios API
-│   │   ├── styles/         # Estilos CSS
-│   │   └── utils/          # Utilidades
 │   ├── public/             # Archivos estáticos
 │   └── package.json
 ├── backend/                 # API Node.js
 │   ├── src/
-│   │   ├── controllers/    # Controladores
-│   │   ├── models/         # Modelos de datos
 │   │   ├── routes/         # Rutas API
 │   │   ├── middleware/     # Middlewares
 │   │   ├── config/         # Configuración
-│   │   └── utils/          # Utilidades
 │   └── package.json
 ├── .gitignore
 ├── README.md
@@ -156,11 +151,6 @@ pnpm dev
 - `POST /api/auth/logout` - Cerrar sesión
 - `GET /api/auth/me` - Obtener usuario actual
 
-### Productos
-- `GET /api/products` - Obtener todos los productos
-- `GET /api/products/:id` - Obtener producto por ID
-- `GET /api/products/category/:category` - Productos por categoría
-
 ### Carrito
 - `GET /api/cart` - Obtener carrito del usuario
 - `POST /api/cart/add` - Agregar producto al carrito
@@ -187,11 +177,8 @@ pnpm dev
 4. Push a la rama (`git push origin feature/AmazingFeature`)
 5. Abre un Pull Request
 
-## 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
-
-## 👨‍💻 Autor
+---
 
 Desarrollado con ❤️ para crear una experiencia de e-commerce moderna y funcional.
 
@@ -200,4 +187,3 @@ Desarrollado con ❤️ para crear una experiencia de e-commerce moderna y funci
 **¡Disfruta construyendo tu e-commerce! 🛍️**
 \`\`\`
 
-Ahora vamos con el **Frontend**:
