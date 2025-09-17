@@ -30,25 +30,27 @@ Un e-commerce completo similar a Amazon construido con React y Node.js, con dise
 
 ## 📁 Estructura del Proyecto
 
-\`\`\`
+```plaintext
 amazon-clone-ecommerce/
-├── frontend/                 # Aplicación React
+├── frontend/                  # Aplicación React
 │   ├── src/
-│   │   ├── components/      # Componentes reutilizables
-│   │   ├── pages/          # Páginas principales
-│   │   ├── context/        # Context API para estado global
-│   ├── public/             # Archivos estáticos
+│   │   ├── components/        # Componentes reutilizables
+│   │   ├── pages/             # Páginas principales
+│   │   ├── context/           # Context API para estado global
+│   ├── public/                # Archivos estáticos
 │   └── package.json
-├── backend/                 # API Node.js
+│
+├── backend/                   # API Node.js
 │   ├── src/
-│   │   ├── routes/         # Rutas API
-│   │   ├── middleware/     # Middlewares
-│   │   ├── config/         # Configuración
+│   │   ├── routes/            # Rutas API
+│   │   ├── middleware/        # Middlewares
+│   │   ├── config/            # Configuración
 │   └── package.json
+│
 ├── .gitignore
 ├── README.md
 └── package.json
-\`\`\`
+```
 
 ## 🛠️ Tecnologías Utilizadas
 
@@ -77,29 +79,29 @@ amazon-clone-ecommerce/
 - pnpm
 - MySQL
 
-### Instalación
+## Instalación
 
-1. **Clonar el repositorio**
-\`\`\`bash
+### 1. Clonar el repositorio
+```bash
 git clone <repository-url>
 cd amazon-clone-ecommerce
-\`\`\`
+```
 
-2. **Instalar dependencias**
-\`\`\`bash
+### 2. Instalar dependencias
+```bash
 pnpm run install-all
-\`\`\`
+```
 
-3. **Configurar variables de entorno**
+### 3. Configurar variables de entorno
 
-**Frontend (.env en carpeta frontend/):**
-\`\`\`env
+**Frontend** (`.env` en carpeta `frontend/`):
+```env
 VITE_API_URL=http://localhost:5000/api
 VITE_FAKESTORE_API=https://fakestoreapi.com
-\`\`\`
+```
 
-**Backend (.env en carpeta backend/):**
-\`\`\`env
+**Backend** (`.env` en carpeta `backend/`):
+```env
 PORT=5000
 DB_HOST=localhost
 DB_USER=tu_usuario
@@ -107,17 +109,91 @@ DB_PASSWORD=tu_contraseña
 DB_NAME=amazon_clone
 JWT_SECRET=tu_jwt_secret_muy_seguro
 NODE_ENV=development
-\`\`\`
+```
+
+### 4. Configurar base de datos
+```sql
+CREATE DATABASE amazon_clone;
+```
+
+### 5. Ejecutar el proyecto
+```bash
+pnpm dev
+```
+
+---
+
+## Instalación Alternativa (con más detalles)
+
+### Prerrequisitos
+- Node.js (versión 18 o superior)
+- PNPM instalado globalmente
+- MySQL/PostgreSQL instalado y corriendo
+
+### Pasos detallados
+
+1. **Clonar y navegar al proyecto**
+   ```bash
+   git clone <repository-url>
+   cd amazon-clone-ecommerce
+   ```
+
+2. **Instalar dependencias**
+   ```bash
+   # Instalar todas las dependencias (frontend y backend)
+   pnpm run install-all
+   
+   # O instalar por separado:
+   # pnpm install --frozen-lockfile
+   ```
+
+3. **Configuración de entorno**
+   
+   Crear archivo `.env` en la carpeta `frontend/`:
+   ```env
+   VITE_API_URL=http://localhost:5000/api
+   VITE_FAKESTORE_API=https://fakestoreapi.com
+   ```
+   
+   Crear archivo `.env` en la carpeta `backend/`:
+   ```env
+   PORT=5000
+   DB_HOST=localhost
+   DB_USER=tu_usuario
+   DB_PASSWORD=tu_contraseña
+   DB_NAME=amazon_clone
+   JWT_SECRET=tu_jwt_secret_muy_seguro_de_al_menos_32_caracteres
+   NODE_ENV=development
+   ```
 
 4. **Configurar base de datos**
-\`\`\`sql
-CREATE DATABASE amazon_clone;
-\`\`\`
+   ```sql
+   -- Crear la base de datos
+   CREATE DATABASE amazon_clone;
+   
+   -- Usar la base de datos
+   USE amazon_clone;
+   
+   -- Las tablas se crearán automáticamente al ejecutar el backend
+   ```
 
 5. **Ejecutar el proyecto**
-\`\`\`bash
-pnpm dev
-\`\`\`
+   ```bash
+   # Ejecutar todo (frontend + backend)
+   pnpm dev
+   
+   # O ejecutar por separado:
+   # Terminal 1: Backend
+   # pnpm run dev:backend
+   
+   # Terminal 2: Frontend  
+   # pnpm run dev:frontend
+   ```
+
+6. **Verificar instalación**
+   - Frontend: http://localhost:5173
+   - Backend API: http://localhost:5000/api
+   - Documentación API: http://localhost:5000/api-docs
 
 ## 🎨 Diseño y UX
 
