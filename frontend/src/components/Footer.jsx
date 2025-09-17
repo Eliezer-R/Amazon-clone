@@ -11,16 +11,16 @@ function Footer () {
               <h3>Conoce más</h3>
               <ul>
                 <li>
-                  <Link to='/about'>Acerca de nosotros</Link>
+                  <Link to='/'>Acerca de nosotros</Link>
                 </li>
                 <li>
-                  <Link to='/careers'>Trabaja con nosotros</Link>
+                  <Link to='/'>Trabaja con nosotros</Link>
                 </li>
                 <li>
-                  <Link to='/press'>Prensa</Link>
+                  <Link to='/'>Prensa</Link>
                 </li>
                 <li>
-                  <Link to='/investor-relations'>Relaciones con inversionistas</Link>
+                  <Link to='/'>Relaciones con inversionistas</Link>
                 </li>
               </ul>
             </div>
@@ -29,16 +29,16 @@ function Footer () {
               <h3>Gana dinero</h3>
               <ul>
                 <li>
-                  <Link to='/sell'>Vende productos</Link>
+                  <Link to='/'>Vende productos</Link>
                 </li>
                 <li>
-                  <Link to='/business'>Amazon Business</Link>
+                  <Link to='/'>Amazon Business</Link>
                 </li>
                 <li>
-                  <Link to='/affiliate'>Programa de afiliados</Link>
+                  <Link to='/'>Programa de afiliados</Link>
                 </li>
                 <li>
-                  <Link to='/advertise'>Publicita tus productos</Link>
+                  <Link to='/'>Publicita tus productos</Link>
                 </li>
               </ul>
             </div>
@@ -47,16 +47,16 @@ function Footer () {
               <h3>Métodos de pago</h3>
               <ul>
                 <li>
-                  <Link to='/payment-methods'>Tarjetas de crédito</Link>
+                  <Link to='/'>Tarjetas de crédito</Link>
                 </li>
                 <li>
-                  <Link to='/gift-cards'>Tarjetas de regalo</Link>
+                  <Link to='/'>Tarjetas de regalo</Link>
                 </li>
                 <li>
-                  <Link to='/payment-help'>Ayuda con pagos</Link>
+                  <Link to='/'>Ayuda con pagos</Link>
                 </li>
                 <li>
-                  <Link to='/currency'>Cambio de moneda</Link>
+                  <Link to='/'>Cambio de moneda</Link>
                 </li>
               </ul>
             </div>
@@ -65,16 +65,16 @@ function Footer () {
               <h3>¿Necesitas ayuda?</h3>
               <ul>
                 <li>
-                  <Link to='/help'>Centro de ayuda</Link>
+                  <Link to='/'>Centro de ayuda</Link>
                 </li>
                 <li>
-                  <Link to='/returns'>Devoluciones</Link>
+                  <Link to='/'>Devoluciones</Link>
                 </li>
                 <li>
-                  <Link to='/shipping'>Envíos</Link>
+                  <Link to='/'>Envíos</Link>
                 </li>
                 <li>
-                  <Link to='/contact'>Contáctanos</Link>
+                  <Link to='/'>Contáctanos</Link>
                 </li>
               </ul>
             </div>
@@ -90,9 +90,9 @@ function Footer () {
             </div>
 
             <div className='footer-links'>
-              <Link to='/privacy'>Política de privacidad</Link>
-              <Link to='/terms'>Términos de uso</Link>
-              <Link to='/cookies'>Política de cookies</Link>
+              <Link to='/'>Política de privacidad</Link>
+              <Link to='/'>Términos de uso</Link>
+              <Link to='/'>Política de cookies</Link>
             </div>
 
             <div className='footer-social'>
