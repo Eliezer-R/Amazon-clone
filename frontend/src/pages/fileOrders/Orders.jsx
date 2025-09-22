@@ -190,7 +190,7 @@ function Orders () {
                           <button className='btn btn-outline btn-small'>Volver a comprar</button>
                         )}
                         {(order.status === 'pending' || order.status === 'processing') && (
-                          <button className='btn btn-outline btn-small text-error' onClick={() => cancelOrder({ orderId: order.id, setOrders })}>Cancelar pedido</button>
+                          <button className='btn btn-outline btn-small text-error' onClick={() => cancelOrder({ orderId: order.id})}>Cancelar pedido</button>
                         )}
                       </div>
 
