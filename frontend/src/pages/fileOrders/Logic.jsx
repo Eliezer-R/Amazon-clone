@@ -85,7 +85,7 @@ export const fetchOrders = async ({ setLoading, setError, setOrders }) => {
 }
 
 // 🔹 Function to cancel an order
-export const cancelOrder = async ({ orderId, setOrders }) => {
+export const cancelOrder = async ({ orderId }) => {
   try {
     const response = await fetch(`${import.meta.env.VITE_API_URL}/orders/${orderId}`, {
       method: 'DELETE',
