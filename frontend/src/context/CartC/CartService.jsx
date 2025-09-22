@@ -1,6 +1,6 @@
 export const fetchCartFromServer = async (product) => {
   try {
-    const response = await fetch('/api/cart', {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/cart`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -23,7 +23,7 @@ export const fetchCartFromServer = async (product) => {
 
 export const fetchRemoveFromServer = async (productId) => {
   try {
-    const response = await fetch(`/api/cart/${productId}`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/cart/${productId}`, {
       method: 'DELETE',
       credentials: 'include'
     })
@@ -38,7 +38,7 @@ export const fetchRemoveFromServer = async (productId) => {
 
 export const fetchUpdateQuantityOnServer = async (productId, quantity) => {
   try {
-    const response = await fetch(`/api/cart/${productId}`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/cart/${productId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -57,7 +57,7 @@ export const fetchUpdateQuantityOnServer = async (productId, quantity) => {
 
 export const fetchClearCartOnServer = async () => {
   try {
-    const response = await fetch('/api/cart/clear', {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/cart/clear`, {
       method: 'DELETE',
       credentials: 'include'
     })
