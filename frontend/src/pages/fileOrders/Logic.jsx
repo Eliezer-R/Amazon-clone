@@ -65,7 +65,7 @@ export const getPaymentStatusColor = (status) => {
 export const fetchOrders = async ({ setLoading, setError, setOrders }) => {
   try {
     setLoading(true)
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/orders`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/orders`, {
       method: 'GET',
       credentials: 'include'
     })
@@ -87,7 +87,7 @@ export const fetchOrders = async ({ setLoading, setError, setOrders }) => {
 // 🔹 Function to cancel an order
 export const cancelOrder = async ({ orderId }) => {
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/orders/${orderId}`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/orders/${orderId}`, {
       method: 'DELETE',
       credentials: 'include'
     })
