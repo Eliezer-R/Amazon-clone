@@ -47,8 +47,8 @@ export const sendcookie = (res, user) => {
   res.cookie('token', token, {
     path: '/',
     httpOnly: true,
-    secure: false,
-    sameSite: 'lax',
+    secure: true,
+    sameSite: 'none',
     maxAge: 1000 * 60 * 60 * 24 * 90
   })
   return res
