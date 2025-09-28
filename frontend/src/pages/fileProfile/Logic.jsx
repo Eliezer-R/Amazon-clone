@@ -2,7 +2,7 @@
 export const fetchOrders = async (setLoadingOrders, setOrders) => {
   try {
     setLoadingOrders(true)
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/orders`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/orders`, {
       method: 'GET',
       credentials: 'include',
       headers: {
@@ -51,7 +51,7 @@ export const handleSubmit = async ({
   setMessage('')
 
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/auth/profile`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/profile`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
