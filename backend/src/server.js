@@ -11,26 +11,25 @@ dotenv.config()
 
 const app = express()
 const PORT = process.env.PORT || 5000
-
-// 🚨 CONFIGURACIÓN TEMPORAL - PERMITE TODOS LOS ORÍGENES
-// Solo para resolver el problema inmediato
-console.log('⚠️ CORS ABIERTO - SOLO PARA DEBUG')
-console.log('API_URL env var:', process.env.API_URL)
-console.log('NODE_ENV:', process.env.NODE_ENV)
+const allowedOrigins = [
+  "https://tu-frontend.vercel.app",
+   process.env.API_URL
+];
 
 app.use(cors({
-  origin: true, // Permite CUALQUIER origen
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("CORS no permitido para este origen"));
+    }
+  },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Cookie', 'X-Requested-With'],
   optionsSuccessStatus: 200
 }))
 
-// Middleware para loggear todas las peticiones
-app.use((req, res, next) => {
-  console.log(`📨 ${req.method} ${req.path} desde origen: ${req.get('origin') || 'sin origen'}`)
-  next()
-})
 
 app.use(express.json({ limit: '10mb' }))
 app.use(express.urlencoded({ extended: true }))
