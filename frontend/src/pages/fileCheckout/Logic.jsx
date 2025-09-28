@@ -83,7 +83,7 @@ export const handleSubmit = async ({ e, setIsLoading, setError, items, setSucces
       payment_method: formData.paymentMethod
     }
 
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/orders`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/orders`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
