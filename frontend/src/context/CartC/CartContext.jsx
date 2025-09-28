@@ -66,7 +66,7 @@ export function CartProvider ({ children }) {
 
       try {
       // 1) fetch cart from backend
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/cart`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/cart`, {
           method: 'GET',
           credentials: 'include'
         })
@@ -119,7 +119,7 @@ export function CartProvider ({ children }) {
 
         // We only upload if there are items to save (and if the backend needs it)
         if (payloadItems.length > 0) {
-          const putRes = await fetch(`${import.meta.env.VITE_API_URL}/cart`, {
+          const putRes = await fetch(`${import.meta.env.VITE_API_URL}/api/cart`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             credentials: 'include',
