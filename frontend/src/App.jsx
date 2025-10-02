@@ -18,15 +18,19 @@ import BackendWarningToast from './Warning'
 function App () {
   const { loading } = useAuth()
 
-  if (loading) {
-    return <LoadingSpinner />
-  }
+ if (loading) {
+  return (
+    <>
+      <LoadingSpinner />
+      <BackendWarningToast /> 
+    </>
+  );
+}
 
   return (
     <div className='app'>
       <Header />
       <main className='main-content'>
-      <BackendWarningToast />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/products' element={<Products />} />
