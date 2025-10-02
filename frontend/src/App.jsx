@@ -23,9 +23,9 @@ function App () {
   }
 
   return (
+      <BackendWarningToast />
     <div className='app'>
       <Header />
-      <BackendWarningToast />
       <main className='main-content'>
         <Routes>
           <Route path='/' element={<Home />} />
