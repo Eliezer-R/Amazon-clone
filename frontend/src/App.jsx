@@ -13,7 +13,7 @@ import Profile from './pages/fileProfile/Profile'
 import ProtectedRoute from './components/ProtectedRoute'
 import LoadingSpinner from './components/LoadingSpinner'
 import Orders from './pages/fileOrders/Orders'
-import BackendWarningToast from './warning'
+import BackendWarningToast from './Warning'
 
 function App () {
   const { loading } = useAuth()
