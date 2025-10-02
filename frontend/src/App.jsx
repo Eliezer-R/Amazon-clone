@@ -17,56 +17,54 @@ import BackendWarningToast from './Warning'
 
 function App () {
   const { loading } = useAuth()
-
- if (loading) {
+  
   return (
     <>
-      <LoadingSpinner />
-      <BackendWarningToast /> 
+      <BackendWarningToast />
+      {loading ? (
+        <LoadingSpinner />
+      ) : (
+        <div className='app'>
+          <Header />
+          <main className='main-content'>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/products' element={<Products />} />
+              <Route path='/products/:category' element={<Products />} />
+              <Route path='/product/:id' element={<ProductDetail />} />
+              <Route path='/cart' element={<Cart />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/register' element={<Register />} />
+              <Route
+                path='/checkout'
+                element={
+                  <ProtectedRoute>
+                    <Checkout />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path='/profile'
+                element={
+                  <ProtectedRoute>
+                    <Profile />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path='/orders'
+                element={
+                  <ProtectedRoute>
+                    <Orders />
+                  </ProtectedRoute>
+                }
+              />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      )}
     </>
-  );
-}
-
-  return (
-    <div className='app'>
-      <Header />
-      <main className='main-content'>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/products' element={<Products />} />
-          <Route path='/products/:category' element={<Products />} />
-          <Route path='/product/:id' element={<ProductDetail />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
-          <Route
-            path='/checkout'
-            element={
-              <ProtectedRoute>
-                <Checkout />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path='/profile'
-            element={
-              <ProtectedRoute>
-                <Profile />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path='/orders'
-            element={
-              <ProtectedRoute>
-                <Orders />
-              </ProtectedRoute>
-            }
-          />
-        </Routes>
-      </main>
-      <Footer />
-    </div>
   )
 }
 
