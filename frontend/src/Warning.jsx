@@ -31,7 +31,7 @@ export default function BackendWarningToast() {
           display: flex;
           align-items: flex-start;
           justify-content: center;
-          z-index: 50;
+          z-index: 9999;
           pointer-events: none;
           padding: 1.5rem 1rem;
         }
