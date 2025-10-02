@@ -23,10 +23,10 @@ function App () {
   }
 
   return (
-      <BackendWarningToast />
     <div className='app'>
       <Header />
       <main className='main-content'>
+      <BackendWarningToast />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/products' element={<Products />} />
