@@ -13,6 +13,7 @@ import Profile from './pages/fileProfile/Profile'
 import ProtectedRoute from './components/ProtectedRoute'
 import LoadingSpinner from './components/LoadingSpinner'
 import Orders from './pages/fileOrders/Orders'
+import BackendWarningToast from './warning'
 
 function App () {
   const { loading } = useAuth()
@@ -24,6 +25,7 @@ function App () {
   return (
     <div className='app'>
       <Header />
+      <BackendWarningToast />
       <main className='main-content'>
         <Routes>
           <Route path='/' element={<Home />} />
